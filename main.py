@@ -6,11 +6,11 @@ app = FastAPI()
 
 @app.get("/")
 def root():
-    client = Client()
-    response = client.chat.completions.create(
-        model="gpt-4",
-        messages=[{"role": "user", "content": "Привет, расскажи анекдот."}]
-    )
+    # client = Client()
+    # response = client.chat.completions.create(
+    #     model="gpt-4",
+    #     messages=[{"role": "user", "content": "Привет, расскажи анекдот."}]
+    # )
     return {"message": "Hello, Denis"}
     # return {"message": response.choices[0].message.content}
 
