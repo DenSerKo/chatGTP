@@ -5,7 +5,7 @@ app = FastAPI()
 
 
 @app.get("/")
-def root():
+async def root():
     client = Client()
     response = client.chat.completions.create(
         provider="You",
