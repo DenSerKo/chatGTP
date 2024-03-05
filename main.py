@@ -8,6 +8,7 @@ app = FastAPI()
 async def root():
     client = Client()
     response = client.chat.completions.create(
+        provider="You",
         model="gpt-4",
         messages=[{"role": "user", "content": "Привет"}]
     )
