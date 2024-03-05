@@ -11,7 +11,7 @@ def root():
     #     model="gpt-4",
     #     messages=[{"role": "user", "content": "Привет, расскажи анекдот."}]
     # )
-    return {"message": "Hello, Denis"}
+    return {"message": "Hello, Alena"}
     # return {"message": response.choices[0].message.content}
 
 
