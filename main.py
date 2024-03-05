@@ -5,15 +5,15 @@ app = FastAPI()
 
 
 @app.get("/")
-async def root():
-    # client = Client()
-    # response = client.chat.completions.create(
-    #     provider="You",
-    #     model="gpt-4",
-    #     messages=[{"role": "user", "content": "Привет"}]
-    # )
-    return {"message": "Hello, Alena"}
-    # return {"message": response.choices[0].message.content}
+def root():
+    client = Client()
+    response = client.chat.completions.create(
+        provider="You",
+        model="gpt-4",
+        messages=[{"role": "user", "content": "Привет"}]
+    )
+    # return {"message": "Hello, Alena"}
+    return {"message": response.choices[0].message.content}
 
 
 @app.get("/hello/{name}")
